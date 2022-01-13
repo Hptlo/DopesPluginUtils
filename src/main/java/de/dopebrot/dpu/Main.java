@@ -1,5 +1,6 @@
 package de.dopebrot.dpu;
 
+import de.dopebrot.dpu.bukkit.InventoryUI;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

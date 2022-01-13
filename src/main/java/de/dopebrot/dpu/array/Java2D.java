@@ -1,4 +1,4 @@
-package de.dopebrot.dpu;
+package de.dopebrot.dpu.array;
 
 import java.awt.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package de.dopebrot.dpu;
+package de.dopebrot.dpu.bukkit;
 
 public enum EHead {
 

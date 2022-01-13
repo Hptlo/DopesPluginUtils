@@ -1,5 +1,6 @@
-package de.dopebrot.dpu;
+package de.dopebrot.dpu.bukkit;
 
+import de.dopebrot.dpu.Main;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.*;

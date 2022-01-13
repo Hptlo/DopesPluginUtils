@@ -1,4 +1,4 @@
-package de.dopebrot.dpu;
+package de.dopebrot.dpu.bukkit;
 
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;

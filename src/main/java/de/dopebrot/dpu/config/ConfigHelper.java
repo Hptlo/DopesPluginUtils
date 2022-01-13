@@ -1,5 +1,6 @@
-package de.dopebrot.dpu;
+package de.dopebrot.dpu.config;
 
+import de.dopebrot.dpu.math.MathHelper;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -79,7 +80,7 @@ public class ConfigHelper {
         }
         File file = new File(filePath);
         YamlConfiguration yamlConfiguration = YamlConfiguration.loadConfiguration(file);
-        return new MathHelper().max((short) yamlConfiguration.getInt(valuePath), Short.MAX_VALUE);
+        return (Short) new MathHelper().max((short) yamlConfiguration.getInt(valuePath), Short.MAX_VALUE);
     }
 
     public Integer getInteger(String filePath, String valuePath) throws IOException {
@@ -106,7 +107,7 @@ public class ConfigHelper {
         }
         File file = new File(filePath);
         YamlConfiguration yamlConfiguration = YamlConfiguration.loadConfiguration(file);
-        return new MathHelper().max((float) yamlConfiguration.getDouble(valuePath), Float.MAX_VALUE);
+        return (Float) new MathHelper().max((float) yamlConfiguration.getDouble(valuePath), Float.MAX_VALUE);
     }
 
 
