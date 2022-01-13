@@ -1,16 +1,8 @@
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
-pom.xml
-server
-src/test
-.idea
-src/main/resources
+/.idea/
+/server/
+/Build Dependency.cmd
+/Build Maven.cmd
+/pom.xml
+/test.yml
+/target/
+/src/main/resources/
