@@ -1,5 +1,4 @@
 target/
-pom.xml
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -15,4 +14,3 @@ server
 src/test
 .idea
 src/main/resources
-Build DPU.bat
