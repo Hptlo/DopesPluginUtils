@@ -50,4 +50,8 @@ public class Java3D {
         } else throw new ArrayIndexOutOfBoundsException("Array is out of bounds");
     }
 
+    public int size() {
+        return size;
+    }
+
 }

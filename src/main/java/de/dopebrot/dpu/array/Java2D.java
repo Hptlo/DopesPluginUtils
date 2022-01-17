@@ -52,4 +52,9 @@ public class Java2D {
         } else throw new IllegalComponentStateException("Object does not match the array");
     }
 
+
+    public int size() {
+        return size;
+    }
+
 }
