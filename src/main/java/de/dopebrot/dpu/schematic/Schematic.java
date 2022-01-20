@@ -7,13 +7,19 @@ import org.bukkit.Location;
 import org.bukkit.World;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Schematic {
 
-    public Schematic(Location blockA, Location blockB) throws IOException {
+    Location blockA;
+    Location blockB;
+
+    public Schematic(Location blockA, Location blockB) {
+        this.blockA = blockA;
+        this.blockB = blockB;
+    }
+
+    public void createSchematic(Location blockA, Location blockB, String schematicName, String filePath) throws IOException {
         ConfigHelper configHelper = new ConfigHelper();
         Switcher switcher = new Switcher();
         ArrayList<Location> locations = switcher.switcher(blockA, blockB);
@@ -37,27 +43,21 @@ public class Schematic {
             }
         }
 
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss");
-        LocalDateTime now = LocalDateTime.now();
-        String date = now.format(dtf);
-
-        configHelper.createFile("Schematic-" + date);
+        configHelper.createFile(schematicName);
         for (int i = 0; i < blockType.size(); i++) {
             for (int x = 0; x < blockType.size(); x++) {
                 for (int y = 0; y < blockType.size(); y++) {
                     for (int z = 0; z < blockType.size(); z++) {
-                        configHelper.setInteger("plugins/DPU/schematic", "schem." + i + ".x", x);
-                        configHelper.setInteger("plugins/DPU/schematic", "schem." + i + ".y", y);
-                        configHelper.setInteger("plugins/DPU/schematic", "schem." + i + ".z", z);
-                        configHelper.setString("plugins/DPU/schematic", "schem." + i + ".type", blockType.get(x, y, z).toString());
-                        configHelper.setString("plugins/DPU/schematic", "schem." + i + ".state", blockState.get(x, y, z).toString());
-                        configHelper.setString("plugins/DPU/schematic", "schem." + i + ".data", blockData.get(x, y, z).toString());
+                        configHelper.setInteger("plugins/" + filePath, "schem." + i + ".x", x);
+                        configHelper.setInteger("plugins/" + filePath, "schem." + i + ".y", y);
+                        configHelper.setInteger("plugins/" + filePath, "schem." + i + ".z", z);
+                        configHelper.setString("plugins/" + filePath, "schem." + i + ".type", blockType.get(x, y, z).toString());
+                        configHelper.setString("plugins/" + filePath, "schem." + i + ".state", blockState.get(x, y, z).toString());
+                        configHelper.setString("plugins/" + filePath, "schem." + i + ".data", blockData.get(x, y, z).toString());
                     }
                 }
             }
         }
-
-
     }
 
 

@@ -5,7 +5,7 @@ import org.bukkit.util.noise.PerlinNoiseGenerator;
 public class Noise3D {
 
     public double getLandscape(int sizeX, int sizeZ) {
-        PerlinNoiseGenerator.
+        return 0.0d;
     }
 
 
