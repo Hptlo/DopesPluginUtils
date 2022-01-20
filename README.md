@@ -22,3 +22,8 @@ when you build stuff for bukkit youll need to build this project and add it in t
         }
         return inventory;
  ```
+
+# Features for the Future
+
+### Crafting helper ![Crafting Helper](https://progress-bar.dev/2/?scale=100&title=Complete&width=200&color=babaca&suffix=%)<br />
+    Adds a helper for crafting smelting etc.. 
