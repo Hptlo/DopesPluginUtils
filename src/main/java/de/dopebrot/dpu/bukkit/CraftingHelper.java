@@ -3,7 +3,6 @@ package de.dopebrot.dpu.bukkit;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
-import org.bukkit.material.MaterialData;
 
 public class CraftingHelper {
 
