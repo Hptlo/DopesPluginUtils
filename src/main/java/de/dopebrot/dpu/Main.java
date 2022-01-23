@@ -25,6 +25,7 @@ public class Main extends JavaPlugin {
         Listener listener = new InventoryUI() {};
     }
 
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
